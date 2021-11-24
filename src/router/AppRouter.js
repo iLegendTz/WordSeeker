@@ -7,7 +7,7 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PublicRoute />} />
+        <Route path="/*" element={<PublicRoute />} />
       </Routes>
     </BrowserRouter>
   );
