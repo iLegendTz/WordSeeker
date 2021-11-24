@@ -28,7 +28,7 @@ export const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-link " + (isActive && "active")
+                  "nav-link " + (isActive && "navbar__active")
                 }
                 to="/"
               >
@@ -39,9 +39,9 @@ export const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>
-                  "nav-item nav-link " + (isActive && "active")
+                  "nav-item nav-link " + (isActive && "navbar__active")
                 }
-                to="/"
+                to="/newProject"
               >
                 New Project
               </NavLink>
