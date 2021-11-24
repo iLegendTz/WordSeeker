@@ -1,6 +1,6 @@
 import React from "react";
 
-import { homeImages } from "../helpers/homeImages";
+import { homeImages } from "../../helpers/homeImages";
 import { Section } from "./Section";
 
 export const HomeScreen = () => {
