@@ -8,15 +8,15 @@ import { Navbar } from "../components/ui/Navbar";
 
 export const PublicRoute = () => {
   return (
-    <>
+    <div style={{ display: "flex", flexFlow: "column", height: "100%" }}>
       <Navbar />
 
-      <div style={{ marginTop: 80 }}>
+      <div style={{ flex: "1 1 auto" }}>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/newProject" element={<CreateNewProyectScreen />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 };
