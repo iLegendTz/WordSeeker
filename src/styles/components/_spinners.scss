@@ -1,0 +1,13 @@
+.spinners__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.spinners__spinner {
+    width: 150px;
+    height: 150px;
+    color: $primary;
+}
