@@ -1,3 +1,10 @@
 .createNewProyect__icon {
     color: $primary;
 }
+
+.createNewProyect__textPreview {
+    border: 1px solid #000;
+    padding: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
