@@ -2,8 +2,10 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
+import { CreateNewProyectOptionsScreen } from "../components/createProyect/CreateNewProyectOptionsScreen";
+import { CreateNewProyectWithFile } from "../components/createProyect/CreateNewProyectWithFileScreen";
+import { CreateNewProyectWithMicrophoneScreen } from "../components/createProyect/CreateNewProyectWithMicrophoneScreen";
 import { HomeScreen } from "../components/home/HomeScreen";
-import { CreateNewProyectScreen } from "../components/createProyect/CreateNewProyectScreen";
 import { Navbar } from "../components/ui/Navbar";
 
 export const PublicRoute = () => {
@@ -13,8 +15,15 @@ export const PublicRoute = () => {
 
       <div style={{ flex: "1 1 auto" }}>
         <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/newProject" element={<CreateNewProyectScreen />} />
+          <Route index element={<HomeScreen />} />
+          <Route path="newProject">
+            <Route index element={<CreateNewProyectOptionsScreen />} />
+            <Route path="file" element={<CreateNewProyectWithFile />} />
+            <Route
+              path="microphone"
+              element={<CreateNewProyectWithMicrophoneScreen />}
+            />
+          </Route>
         </Routes>
       </div>
     </div>
