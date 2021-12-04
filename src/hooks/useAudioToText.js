@@ -13,7 +13,10 @@ export const useAudioToText = () => {
       .then((response) => response.json())
       .then((data) => {
         setText(data.text);
-        setIsLoading(false);
+
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 3000);
       });
   };
 
