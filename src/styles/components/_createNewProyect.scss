@@ -8,3 +8,28 @@
     overflow: scroll;
     overflow-x: hidden;
 }
+
+.createNewProyect__optionContainer {
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.createNewProyect__playContainer {
+    margin-bottom: 1rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.createNewProyect__playButton {
+    color: $primary;
+}
+
+.createNewProyect__paragraph {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
