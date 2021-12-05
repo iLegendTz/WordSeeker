@@ -43,7 +43,7 @@ export const Navbar = () => {
                 }
                 to="/newProject"
               >
-                New Project
+                FAQ
               </NavLink>
             </li>
           </ul>
