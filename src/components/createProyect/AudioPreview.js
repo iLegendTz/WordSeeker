@@ -3,7 +3,7 @@ import React from "react";
 export const AudioPreview = ({ audioFile }) => {
   return (
     <>
-      <i className="fas fa-file-audio fa-10x createNewProyect__icon mb-3 d-block"></i>
+      <i className="fas fa-file-audio fa-10x icon__icon mb-3 d-block"></i>
       <audio controls className="mb-5">
         <source src={audioFile} type="audio/ogg" />
       </audio>

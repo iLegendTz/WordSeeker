@@ -56,7 +56,7 @@ export const CreateNewProyectWithFile = () => {
               <>
                 <label
                   htmlFor="audio"
-                  className="fas fa-folder-plus fa-10x createNewProyect__icon"
+                  className="fas fa-folder-plus fa-10x icon__icon"
                   style={{ cursor: "pointer" }}
                 ></label>
                 {isAudioExtensionWrong && (

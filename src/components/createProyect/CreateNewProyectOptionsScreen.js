@@ -25,7 +25,7 @@ export const CreateNewProyectOptionsScreen = () => {
             className="createNewProyect__optionContainer"
             onClick={() => onOptionSelected(options.FILE)}
           >
-            <i className="fas fa-folder-plus fa-10x createNewProyect__icon"></i>
+            <i className="fas fa-folder-plus fa-10x icon__icon"></i>
             <h3 className="text-dark">Subir un archivo</h3>
           </div>
         </div>
@@ -35,7 +35,7 @@ export const CreateNewProyectOptionsScreen = () => {
             className="createNewProyect__optionContainer"
             onClick={() => onOptionSelected(options.MICROPHONE)}
           >
-            <i className="fas fa-microphone fa-10x createNewProyect__icon"></i>
+            <i className="fas fa-microphone fa-10x icon__icon"></i>
             <h3 className="text-dark">Usar mi microfono</h3>
           </div>
         </div>
