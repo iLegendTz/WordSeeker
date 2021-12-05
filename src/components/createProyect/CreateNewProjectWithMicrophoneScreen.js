@@ -2,6 +2,6 @@ import React from "react";
 
 import { TextPreviewWithMicrophone } from "./TextPreviewWithMicrophone";
 
-export const CreateNewProyectWithMicrophoneScreen = () => {
+export const CreateNewProjectWithMicrophoneScreen = () => {
   return <TextPreviewWithMicrophone />;
 };

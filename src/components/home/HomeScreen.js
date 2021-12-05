@@ -1,7 +1,7 @@
 import React from "react";
 
 import { featuresData } from "../../data/featuresData";
-import { CreateNewProyectOptions } from "../createProyect/CreateNewProyectOptions";
+import { CreateNewProjectOptions } from "../createProyect/CreateNewProjectOptions";
 import { Feature } from "./Feature";
 
 export const HomeScreen = () => {
@@ -11,7 +11,7 @@ export const HomeScreen = () => {
         <b>Transcribe el texto de tus audios</b>
       </h2>
 
-      <CreateNewProyectOptions />
+      <CreateNewProjectOptions />
 
       <div className="col-12 text-center mb-5">
         <h2>

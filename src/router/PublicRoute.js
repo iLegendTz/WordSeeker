@@ -2,8 +2,8 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import { CreateNewProyectWithFile } from "../components/createProyect/CreateNewProyectWithFileScreen";
-import { CreateNewProyectWithMicrophoneScreen } from "../components/createProyect/CreateNewProyectWithMicrophoneScreen";
+import { CreateNewProjectWithFile } from "../components/createProyect/CreateNewProjectWithFileScreen";
+import { CreateNewProjectWithMicrophoneScreen } from "../components/createProyect/CreateNewProjectWithMicrophoneScreen";
 import { HomeScreen } from "../components/home/HomeScreen";
 import { Footer } from "../components/ui/Footer";
 import { Navbar } from "../components/ui/Navbar";
@@ -17,10 +17,10 @@ export const PublicRoute = () => {
         <Routes>
           <Route index element={<HomeScreen />} />
           <Route path="newProject">
-            <Route path="file" element={<CreateNewProyectWithFile />} />
+            <Route path="file" element={<CreateNewProjectWithFile />} />
             <Route
               path="microphone"
-              element={<CreateNewProyectWithMicrophoneScreen />}
+              element={<CreateNewProjectWithMicrophoneScreen />}
             />
           </Route>
         </Routes>

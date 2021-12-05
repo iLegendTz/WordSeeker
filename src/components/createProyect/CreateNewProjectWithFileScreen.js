@@ -5,7 +5,7 @@ import { Spinner } from "../Spinner/Spinner";
 import { AudioPreview } from "./AudioPreview";
 import { TextPreviewWithFile } from "./TextPreviewWithFile";
 
-export const CreateNewProyectWithFile = () => {
+export const CreateNewProjectWithFile = () => {
   const [audioFile, setAudioFile] = useState(null);
   const [formData, setFormData] = useState(null);
   const [isAudioExtensionWrong, setIsAudioExtensionWrong] = useState(false);
