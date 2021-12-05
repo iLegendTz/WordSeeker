@@ -18,7 +18,7 @@ export const TextPreviewWithMicrophone = () => {
     useVoiceRecognition(recognition);
 
   useEffect(() => {
-    if (lastPhrase != "") {
+    if (lastPhrase !== "") {
       const p = document.createElement("p");
       p.className = "createNewProyect__paragraph";
       p.innerHTML = lastPhrase;
@@ -47,7 +47,7 @@ export const TextPreviewWithMicrophone = () => {
           )}
         </div>
 
-        {text != "" && (
+        {text !== "" && (
           <div
             className="d-inline-flex createNewProyect__playContainer"
             onClick={() => setText("")}
@@ -63,7 +63,7 @@ export const TextPreviewWithMicrophone = () => {
         id="text-container"
       ></div>
 
-      {text != "" && (
+      {text !== "" && (
         <div className="d-flex flex-row-reverse">
           <button className="buttons__btn" onClick={() => onDownload(text)}>
             Descargar
