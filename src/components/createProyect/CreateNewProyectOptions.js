@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-export const CreateNewProyectOptionsScreen = () => {
+export const CreateNewProyectOptions = () => {
   const navigate = useNavigate();
   const options = { FILE: "File", MICROPHONE: "Microphone" };
 
