@@ -6,7 +6,7 @@ export const Footer = () => {
       <hr />
 
       <p className="text-muted">
-        <i class="far fa-copyright"></i> Word Seeker
+        <i className="far fa-copyright"></i> Word Seeker
       </p>
     </div>
   );
