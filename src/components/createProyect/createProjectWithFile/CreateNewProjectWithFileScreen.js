@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import { useAudioToText } from "../../hooks/useAudioToText";
-import { LoadingSpinner } from "../spinners/LoadingSpinner";
+import { useAudioToText } from "../../../hooks/useAudioToText";
+import { LoadingSpinner } from "../../spinners/LoadingSpinner";
 import { AudioPreview } from "./AudioPreview";
 import { TextPreviewWithFile } from "./TextPreviewWithFile";
 
-export const CreateNewProjectWithFile = () => {
+export const CreateNewProjectWithFileScreen = () => {
   const [audioFile, setAudioFile] = useState(null);
   const [formData, setFormData] = useState(null);
   const [isAudioExtensionWrong, setIsAudioExtensionWrong] = useState(false);

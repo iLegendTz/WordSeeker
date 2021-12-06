@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { useCreateAndDownloadTextFile } from "../../hooks/useCreateAndDownloadTextFile";
-import { useVoiceRecognition } from "../../hooks/useVoiceRecognition";
+import { admitedAudioMicLanguages } from "../../../data/admitedAudioMicLanguages";
+import { useCreateAndDownloadTextFile } from "../../../hooks/useCreateAndDownloadTextFile";
+import { useVoiceRecognition } from "../../../hooks/useVoiceRecognition";
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -9,13 +10,20 @@ const SpeechRecognition =
 const recognition = new SpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = false;
-recognition.lang = "es-ES";
 
 export const TextPreviewWithMicrophone = () => {
   const { onDownload } = useCreateAndDownloadTextFile();
 
   const { text, setText, isListening, setIsListening, lastPhrase } =
     useVoiceRecognition(recognition);
+
+  const [language, setLanguage] = useState(
+    admitedAudioMicLanguages[0].languageCode
+  );
+
+  useEffect(() => {
+    recognition.lang = language;
+  }, [language]);
 
   useEffect(() => {
     if (lastPhrase !== "") {
@@ -56,6 +64,24 @@ export const TextPreviewWithMicrophone = () => {
             <p className="ms-2 pt-2 mb-0">Reiniciar</p>
           </div>
         )}
+      </div>
+
+      <div className="mb-1">
+        <label>Idioma:</label>
+        <select
+          className="form-select"
+          onChange={(e) => {
+            setLanguage(e.target.value);
+          }}
+        >
+          {admitedAudioMicLanguages.map(({ language, languageCode }) => {
+            return (
+              <option key={languageCode} value={languageCode}>
+                {language}
+              </option>
+            );
+          })}
+        </select>
       </div>
 
       <div

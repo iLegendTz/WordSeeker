@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useCreateAndDownloadTextFile } from "../../hooks/useCreateAndDownloadTextFile";
+import { useCreateAndDownloadTextFile } from "../../../hooks/useCreateAndDownloadTextFile";
 
 export const TextPreviewWithFile = ({ text, audioFile }) => {
   const { onDownload } = useCreateAndDownloadTextFile();
