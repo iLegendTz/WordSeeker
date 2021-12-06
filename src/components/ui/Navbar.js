@@ -41,7 +41,7 @@ export const Navbar = () => {
                 className={({ isActive }) =>
                   "nav-item nav-link " + (isActive && "navbar__active")
                 }
-                to="/newProject"
+                to="/FAQ"
               >
                 FAQ
               </NavLink>
