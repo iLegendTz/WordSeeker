@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useAudioToText } from "../../../hooks/useAudioToText";
-import { LoadingSpinner } from "../../spinners/LoadingSpinner";
+import { LoadingSpinner } from "../../ui/LoadingSpinner";
 import { AudioPreview } from "./AudioPreview";
 import { TextPreviewWithFile } from "./TextPreviewWithFile";
 
