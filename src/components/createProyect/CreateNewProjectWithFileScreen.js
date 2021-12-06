@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useAudioToText } from "../../hooks/useAudioToText";
-import { Spinner } from "../Spinner/Spinner";
+import { LoadingSpinner } from "../Spinners/LoadingSpinner";
 import { AudioPreview } from "./AudioPreview";
 import { TextPreviewWithFile } from "./TextPreviewWithFile";
 
@@ -37,7 +37,7 @@ export const CreateNewProjectWithFile = () => {
     return allowedExtension.exec(type);
   };
 
-  if (isLoading) return <Spinner />;
+  if (isLoading) return <LoadingSpinner />;
   else if (text === "" || !text)
     return (
       <>

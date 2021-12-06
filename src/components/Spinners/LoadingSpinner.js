@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Spinner = () => {
+export const LoadingSpinner = () => {
   return (
     <div className="spinners__container">
       <div className="text-center">
