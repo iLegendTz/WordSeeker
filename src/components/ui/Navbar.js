@@ -10,7 +10,7 @@ export const Navbar = () => {
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Navbar
+          Word Seeker
         </Link>
         <button
           className="navbar-toggler"
