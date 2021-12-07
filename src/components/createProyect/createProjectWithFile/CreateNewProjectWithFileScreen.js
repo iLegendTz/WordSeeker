@@ -46,28 +46,25 @@ export const CreateNewProjectWithFileScreen = () => {
         </h2>
         <p className="text-center">Formatos validos: WAV, FLAC, MP3</p>
         <form onSubmit={audioToText}>
-          <div className="text-center">
-            {audioFile ? (
-              <AudioPreview
-                audioFile={URL.createObjectURL(audioFile)}
-                isLoading={isLoading}
-              />
-            ) : (
-              <>
-                <label
-                  htmlFor="audio"
-                  className="fas fa-folder-plus fa-10x icon__icon"
-                  style={{ cursor: "pointer" }}
-                ></label>
-                {isAudioExtensionWrong && (
-                  <div className="alert alert-danger" role="alert">
-                    Archivo no valido, tiene que ser en formato: WAV, FLAC o
-                    MP3.
-                  </div>
-                )}
-              </>
-            )}
-          </div>
+          {audioFile ? (
+            <AudioPreview
+              audioFile={URL.createObjectURL(audioFile)}
+              isLoading={isLoading}
+            />
+          ) : (
+            <>
+              <label
+                htmlFor="audio"
+                className="fas fa-folder-plus fa-10x icon__icon"
+                style={{ cursor: "pointer" }}
+              ></label>
+              {isAudioExtensionWrong && (
+                <div className="alert alert-danger" role="alert">
+                  Archivo no valido, tiene que ser en formato: WAV, FLAC o MP3.
+                </div>
+              )}
+            </>
+          )}
           <input
             className="d-none"
             accept=".wav,.flac,.mp3"
