@@ -31,7 +31,7 @@ export const CreateNewProjectOptions = () => {
           className="createNewProyect__optionContainer"
           onClick={() => onOptionSelected(options.MICROPHONE)}
         >
-          <i className="fas fa-microphone fa-10x icon__icon"></i>
+          <i className="fas fa-microphone fa-9x icon__icon mb-3"></i>
           <h3 className="text-dark">Usar mi microfono</h3>
         </div>
       </div>
