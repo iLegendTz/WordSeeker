@@ -1,9 +1,18 @@
 import React from "react";
+import { admitedAudioFileLanguages } from "../../../data/admitedAudioFileLanguages";
 
 import { useCreateAndDownloadTextFile } from "../../../hooks/useCreateAndDownloadTextFile";
 
-export const TextPreviewWithFile = ({ text, audioFile }) => {
+export const TextPreviewWithFile = ({
+  text,
+  audioFile,
+  languageCodeSelected,
+}) => {
   const { onDownload } = useCreateAndDownloadTextFile();
+
+  const languageSelected = admitedAudioFileLanguages.find(
+    ({ languageCode }) => languageCode === languageCodeSelected
+  );
 
   return (
     <div className="w-100 h-100">
@@ -15,9 +24,17 @@ export const TextPreviewWithFile = ({ text, audioFile }) => {
           Descargar
         </button>
 
-        <audio controls className="mb-5">
-          <source src={audioFile} type="audio/ogg" />
-        </audio>
+        <div className="pt-3">
+          <p className="m-0" style={{ fontSize: "15px" }}>
+            {languageSelected.language}
+          </p>
+        </div>
+
+        <div>
+          <audio controls className="mb-5">
+            <source src={audioFile} type="audio/ogg" />
+          </audio>
+        </div>
       </div>
     </div>
   );
