@@ -1,1 +1,1 @@
-export const admitedAudioFileFormats = [".mp3", ".WAV", ".FLAC"];
+export const admitedAudioFileFormats = [".WAV"];
