@@ -37,7 +37,7 @@ export const FAQScreen = () => {
 
           <div className="FAQ__section-container">
             <h4>Cual es el limite de minutos que debe tener mi audio?</h4>
-            <p>480 minutos.</p>
+            <p>3 minutos.</p>
           </div>
         </div>
 
