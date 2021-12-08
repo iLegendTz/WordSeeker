@@ -1,24 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useAudioToText } from "../../../hooks/useAudioToText";
 import { LoadingSpinner } from "../../ui/LoadingSpinner";
 import { AudioPreview } from "./AudioPreview";
 import { TextPreviewWithFile } from "./TextPreviewWithFile";
+import { admitedAudioFileLanguages } from "../../../data/admitedAudioFileLanguages";
+import { LanguageSelector } from "../../ui/LanguageSelector";
 
 export const CreateNewProjectWithFileScreen = () => {
   const [audioFile, setAudioFile] = useState(null);
   const [formData, setFormData] = useState(null);
   const [isAudioExtensionWrong, setIsAudioExtensionWrong] = useState(false);
   const { isLoading, text, getText } = useAudioToText();
+  const [language, setLanguage] = useState(
+    admitedAudioFileLanguages[0].languageCode
+  );
+  const data = new FormData();
 
   const onFileUpload = (e) => {
     if (e.target.files.length > 0) {
-      if (fileValidation(e.target.files[0].type)) {
+      const file = e.target.files[0];
+      if (fileValidation(file.type)) {
         setIsAudioExtensionWrong(false);
-        setAudioFile(e.target.files[0]);
-
-        const data = new FormData();
-        data.append("audio", e.target.files[0]);
+        setAudioFile(file);
+        data.append("audio", file);
         setFormData(data);
       } else {
         setIsAudioExtensionWrong(true);
@@ -30,6 +35,10 @@ export const CreateNewProjectWithFileScreen = () => {
     e.preventDefault();
     getText(formData);
   };
+
+  useEffect(() => {
+    data.set("languageCode", language);
+  }, [language]);
 
   const fileValidation = (type) => {
     const allowedExtension = /(audio\/mpeg|audio\/wav|audio\/flac)$/i;
@@ -47,19 +56,27 @@ export const CreateNewProjectWithFileScreen = () => {
         <p className="text-center">Formatos validos: WAV, FLAC, MP3</p>
         <form onSubmit={audioToText}>
           {audioFile ? (
-            <AudioPreview
-              audioFile={URL.createObjectURL(audioFile)}
-              isLoading={isLoading}
-            />
+            <AudioPreview audioFile={URL.createObjectURL(audioFile)} />
           ) : (
             <>
-              <label
-                htmlFor="audio"
-                className="fas fa-folder-plus fa-10x icon__icon"
-                style={{ cursor: "pointer" }}
-              ></label>
+              <div className="col-12 text-center">
+                <label
+                  htmlFor="audio"
+                  className="fas fa-folder-plus fa-10x icon__icon mx-auto"
+                  style={{ cursor: "pointer" }}
+                ></label>
+              </div>
+
+              <div className="mb-5 col-12">
+                <div className="mx-auto" style={{ width: "300px" }}>
+                  <LanguageSelector
+                    languages={admitedAudioFileLanguages}
+                    setLanguage={setLanguage}
+                  />
+                </div>
+              </div>
               {isAudioExtensionWrong && (
-                <div className="alert alert-danger" role="alert">
+                <div className="alert alert-danger text-center" role="alert">
                   Archivo no valido, tiene que ser en formato: WAV, FLAC o MP3.
                 </div>
               )}
