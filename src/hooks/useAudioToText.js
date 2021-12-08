@@ -6,7 +6,7 @@ export const useAudioToText = () => {
 
   const getText = async (formData) => {
     setIsLoading(true);
-    fetch("/api/audio", {
+    fetch("https://speechtotexttest.herokuapp.com/api/audio", {
       method: "POST",
       body: formData,
     })
@@ -20,5 +20,5 @@ export const useAudioToText = () => {
       });
   };
 
-  return { isLoading, text, getText };
+  return { getText, text, isLoading };
 };
