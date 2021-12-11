@@ -19,7 +19,7 @@ export const HomeScreen = () => {
         </h2>
         <p>
           <b>Word Seeker</b> te permite transcribir el texto de tus archivos de
-          audio ya sea mp3, WAV o FLAC. Ademas de poder hacerlo en tiempo real
+          audio WAV. Ademas de poder hacerlo en tiempo real
           utilizando el audio de tu microfono teniendo una visualizacion de lo
           que estas diciendo pudiendo pausar y continuar la grabacion en el
           momento que tu quieras. <b>Word Seeker</b> te permite descargar un
