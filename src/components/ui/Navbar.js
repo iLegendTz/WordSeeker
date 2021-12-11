@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 export const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light mb-5"
+      className="navbar navbar-expand-lg navbar-light"
       style={{ backgroundColor: "white" }}
     >
       <div className="container-fluid">

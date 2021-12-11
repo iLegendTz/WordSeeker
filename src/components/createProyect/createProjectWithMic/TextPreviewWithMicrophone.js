@@ -70,7 +70,7 @@ export const TextPreviewWithMicrophone = () => {
   }, [text]);
 
   return (
-    <div className="w-100 h-100">
+    <>
       <div className="d-flex justify-content-between">
         <div
           className="d-inline-flex createNewProyect__playContainer"
@@ -98,8 +98,9 @@ export const TextPreviewWithMicrophone = () => {
       </div>
 
       <div
-        className="w-100 h-75 createNewProyect__textPreview mb-2"
+        className="w-100 createNewProyect__textPreview mb-2"
         id="text-container"
+        style={{ minHeight: "calc(100vh - 325px)" }}
       ></div>
 
       <div className="d-flex flex-row-reverse">
@@ -111,6 +112,6 @@ export const TextPreviewWithMicrophone = () => {
           Descargar
         </button>
       </div>
-    </div>
+    </>
   );
 };

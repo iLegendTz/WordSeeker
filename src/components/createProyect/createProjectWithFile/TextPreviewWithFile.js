@@ -15,8 +15,11 @@ export const TextPreviewWithFile = ({
   );
 
   return (
-    <div className="w-100 h-100">
-      <div className="w-100 h-75 createNewProyect__textPreview mb-4">
+    <>
+      <div
+        className="createNewProyect__textPreview mb-4"
+        style={{ minHeight: "calc(100vh - 300px)" }}
+      >
         {text}
       </div>
       <div className="d-flex flex-row-reverse justify-content-around">
@@ -36,6 +39,6 @@ export const TextPreviewWithFile = ({
           </audio>
         </div>
       </div>
-    </div>
+    </>
   );
 };

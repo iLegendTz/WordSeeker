@@ -11,10 +11,9 @@ import { Navbar } from "../components/ui/Navbar";
 
 export const PublicRoute = () => {
   return (
-    <div style={{ display: "flex", flexFlow: "column", height: "100%" }}>
+    <>
       <Navbar />
-
-      <div style={{ flex: "1 1 auto" }}>
+      <div className="base__main">
         <Routes>
           <Route index element={<HomeScreen />} />
 
@@ -33,6 +32,6 @@ export const PublicRoute = () => {
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 };
