@@ -13,7 +13,7 @@ export const HomeScreen = () => {
 
       <CreateNewProjectOptions />
 
-      <div className="col-12 text-center mb-5">
+      <div className="col-12 text-center mb-5 mt-4">
         <h2>
           <b>Word Seeker</b>
         </h2>
